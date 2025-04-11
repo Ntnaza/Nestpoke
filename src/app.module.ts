@@ -11,7 +11,7 @@ dotenv.config();
     ScheduleModule.forRoot(),
     MongooseModule.forRoot(
       process.env.MONGO_URL ||
-        'mongodb+srv://admin:admin123@cluster0.shyz7.mongodb.net/pokemons?retryWrites=true&w=majority',
+        'mongodb+srv://admin:admin321@fullstack.gygqcmo.mongodb.net/?retryWrites=true&w=majority&appName=Fullstack',
     ),
     PokemonsModule,
   ],

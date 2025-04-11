@@ -25,7 +25,7 @@ interface PokemonAPIResponse {
 export class PokemonsService {
   constructor(@InjectModel(Pokemon.name) private pokemonModel: Model<Pokemon>) {}
 
-  @Cron(CronExpression.EVERY_HOUR)
+  @Cron(CronExpression.EVERY_HOUR, { name: 'fetch-pokemons-job' }) // ✅ Diperbaiki
   async fetchPokemonsAutomatically() {
     console.log('🔄 [Cron] Fetching Pokémon automatically...');
     try {
